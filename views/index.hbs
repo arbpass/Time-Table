@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <script defer src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="date"></div>
+
+        <div class="period">
+            <form action="/" method="POST" id="confirm-box">
+                <input class="typecode" name="typecode" placeholder="Enter the Code"/>
+                <input class="typecode" name="newpr" placeholder="New period"/>
+                <button id="save" type="submit">SAVE</button>
+                <button type="button" id="cancel2">CANCEL</button>
+            </form>
+
+            <div class="options">
+                <button id="cancel">&#10060;</button><span id="code"></span>
+                <button id="edit" class="op-btn">Edit</button>
+                <button id="attendance" class="op-btn" onclick="window.location.href='/calendar'">Calendar</button>
+                <button id="schedule" class="op-btn" onclick="window.location.href='/defaultSchedule'">Schedule</button>
+            </div>
+
+            <button id="pr1" class="btn">{{period1}} (9am - 10am)</button>
+            <button id="pr2" class="btn">{{period2}} (10am - 11am)</button>
+            <button id="pr3" class="btn">{{period3}} (11am - 12pm)</button>
+            <button id="br" class="btn">{{break}} (12pm - 1pm)</button>
+            <button id="pr4" class="btn">{{period4}} (1pm - 2pm)</button>
+            <button id="pr5" class="btn">{{period5}} (2pm - 3pm)</button>
+            <button id="pr6" class="btn">{{period6}} (3pm - 4pm)</button>
+        </div>
+
+        <footer>ARB | Copyright 2021</footer>
+    </div>
+</body>
+</html>

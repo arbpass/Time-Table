@@ -1,0 +1,72 @@
+[
+    {
+        "day": "Sunday",
+        "pr1": "sun1",    
+        "pr2": "sun2",
+        "pr3": "sun3",
+        "br": "BREAK",
+        "pr4": "sun4",
+        "pr5": "sun5",
+        "pr6": "sun6"
+    },
+    {
+        "day": "Monday",
+        "pr1": "mon1",    
+        "pr2": "mon2",
+        "pr3": "mon3",
+        "br": "BREAK",
+        "pr4": "mon4",
+        "pr5": "mon5",
+        "pr6": "mon6"   
+    },
+    {
+        "day": "Tuesday",
+        "pr1": "tue1",    
+        "pr2": "tue2",
+        "pr3": "tue3",
+        "br": "BREAK",
+        "pr4": "tue4",
+        "pr5": "tue5",
+        "pr6": "tue6"   
+    },
+    {
+        "day": "Wednesday",
+        "pr1": "wed1",    
+        "pr2": "wed2",
+        "pr3": "wed3",
+        "br": "BREAK",
+        "pr4": "wed4",
+        "pr5": "wed5",
+        "pr6": "wed6"   
+    },
+    {
+        "day": "Thursday",
+        "pr1": "thu1",    
+        "pr2": "thu2",
+        "pr3": "thu3",
+        "br": "BREAK",
+        "pr4": "thu4",
+        "pr5": "thu5",
+        "pr6": "thu6"   
+    },
+    {
+        "day": "Friday",
+        "pr1": "fri1",    
+        "pr2": "fri2",
+        "pr3": "fri3",
+        "br": "BREAK",
+        "pr4": "fri4",
+        "pr5": "fri5",
+        "pr6": "fri6"   
+    },
+    {
+        "day": "Saturday",
+        "pr1": "sat1",    
+        "pr2": "sat2",
+        "pr3": "sat3",
+        "br": "BREAK",
+        "pr4": "sat4",
+        "pr5": "sat5",
+        "pr6": "sat6"   
+    }
+]

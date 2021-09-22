@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(43, 43, 43);
+}
+
+#faculty{
+    width: 42%;
+    height: 200px;
+    margin: 200px 10px;
+    float: left;
+}
+
+#student{
+    width: 42%;
+    height: 200px;
+    margin: 200px 10px;
+    float: right;
+}
+
+.btn{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-family: impact;
+    font-size: 250%;
+    transition: color 5s;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
+.btn-sign{
+    background-color: transparent;
+    border: none;
+    color: white;
+    transition: font-size 2s;
+    font-size: 700%;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    text-shadow: 0px 0px 10px white;
+}
