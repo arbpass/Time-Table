@@ -3,6 +3,7 @@ const app= express();
 const fs= require("fs");
 const bp = require('body-parser'); //for req.body.name
 const Edited= require("./dbperiods"); //include schema from db
+const PORT= process.env.port || 3000;
 
 //template engine setup
 app.use(express.static("public"));
@@ -41,9 +42,6 @@ fs.readFile(`${__dirname}/public/schedule.json`, "utf-8", (err, data)=>{
         if(regno== "trial" && pass== "lofi123")
             res.render("loggedin");
     });
-    app.get("/loggedin", (req,res)=> {
-        res.render("loggedin");
-    });
 
     //endpoint STUDENTS (endpoints should be inside fs.readfile becuz its giving schedule as object named 'today')
     app.get("/students", (req, res)=> {
@@ -60,6 +58,19 @@ fs.readFile(`${__dirname}/public/schedule.json`, "utf-8", (err, data)=>{
 
     //endpoint FACULTY (EDIT option works)
     app.post("/", (req, res)=>{
+
+        res.render("index", { //serve the hbs page
+            period1: today.pr1,
+            period2: today.pr2,
+            period3: today.pr3,
+            break: today.br,
+            period4: today.pr4,
+            period5: today.pr5,
+            period6: today.pr6,
+        });
+    });
+
+    app.post("/saveEdit", (req, res)=>{
         const code= req.body.typecode; //return text typed in 1st input 
         const newpr= req.body.newpr; //2nd input
         today[code]= newpr;
@@ -75,18 +86,11 @@ fs.readFile(`${__dirname}/public/schedule.json`, "utf-8", (err, data)=>{
             period6: today.pr6,
         });
         editedSchedule.save();
-
-        res.render("index", { //serve the hbs page
-            period1: today.pr1,
-            period2: today.pr2,
-            period3: today.pr3,
-            break: today.br,
-            period4: today.pr4,
-            period5: today.pr5,
-            period6: today.pr6,
-        });
+        res.render("successPage");
     });
+
 });
+
 
 //endpoint (SCHEDULE works & ACADEMIC CALENDAR works)
 app.get("/defaultSchedule",(req, res)=>{
@@ -97,4 +101,4 @@ app.get("/calendar", (req, res)=> {
 })
 
 
-app.listen(80);
+app.listen(PORT);
