@@ -3,7 +3,7 @@ const app= express();
 const fs= require("fs");
 const bp = require('body-parser'); //for req.body.name
 const Edited= require("./dbperiods"); //include schema from db
-const PORT= process.env.port || 3000;
+const PORT= process.env.PORT || 3000;
 
 //template engine setup
 app.use(express.static("public"));
@@ -100,8 +100,5 @@ app.get("/calendar", (req, res)=> {
     res.render("calendar");
 })
 
-app.get("/", (req, res)=> {
-    res.send("hey");
-})
 
 app.listen(PORT);
