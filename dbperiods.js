@@ -1,7 +1,9 @@
 //connect with DB
 const mongoose= require("mongoose");
+const DB= "mongodb+srv://arb:arbmongo@cluster0.smtw9.mongodb.net/time-table?retryWrites=true&w=majority";
+// const DB= "'mongodb://localhost:27017/scheduleApp'";
 
-mongoose.connect('mongodb://localhost:27017/scheduleApp', {
+mongoose.connect(DB, {
     useNewUrlParser: true}).then(()=>{
         console.log("successfull");
 });
