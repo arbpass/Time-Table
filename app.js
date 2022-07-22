@@ -100,5 +100,8 @@ app.get("/calendar", (req, res)=> {
     res.render("calendar");
 })
 
+app.get("/", (req, res)=> {
+    res.send("hey");
+})
 
 app.listen(PORT);
